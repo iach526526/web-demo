@@ -5,63 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wooden bookcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Kiwi+Maru:wght@300;500&display=swap" rel="stylesheet">
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             letter-spacing: 1px;
+            overflow-x: hidden;
+            /* font-family: 'Caveat', cursive; */
+            font-family: 'Kiwi Maru', serif;
+            letter-spacing: 0.2em;
+            
         }
-        /* body
+        /* 背景DIV */
+        #Gpaper
         {
-            border: ;
-        } */
+            background: linear-gradient(#a7a7f3,#9cf4a0);
+            width: 100vmax;
+            height: 100vmax;
+            z-index: 0.1;
+            position: sticky;
+        }
+        .top-nav
+        {
+            width: 100%;
+            height: 10vh;
+            display:flex
+        }
+        #searchbox
+        {
+            top: 1vh;
+            right: 15vw;
+            width: 60vmin;
+            height: 5vh;
+            position: absolute;
+        }
+        #login-image
+        {
+            margin-top:2vh ;
+            height: 5vh;
+            width: 5vw;
+            /* float: right; */
+            right: 5vw;
+            position: absolute;
+            background:linear-gradient(#9956f0,#f056e6);
+            border-radius: 20%;
+        }
         img
         {
             width: 99%;
             height: 95%;
             display: block;
         }
-        #login-image
-        {
-            height: 5vh;
-            width: 5vw;
-            float: right;
-            margin: ;
-            background: #000;
-        }
+
         .case {
-            background-color:#efe7b7;
+            background:linear-gradient(45deg,#efe7b7,#f9e46d);
             margin: 0 10vw 0 10vw;
             width: 80vw;
-            height: 100%;
             text-align: center;
             justify-content: center;
+            outline: 0.5rem solid rgba(131, 68, 4, 0.388);
+            border: #f056e6 solid;
         }
         .case #title
         {
+            font-size: 2em;
             text-align: center;
             display: block;
-            background:linear-gradient(to left top, rgb(255, 255, 0), rgb(255, 65, 65));
+            background:linear-gradient(to left top, rgb(249, 230, 122), rgb(190, 245, 163));
         }
         .item
         {
-            background-color: azure;
+            background: linear-gradient(35deg,azure,#ddcbf535);
             margin: 2em ;
             width:13rem ;
             display: inline-block;
             justify-content: center;
             height:17rem ;
+            padding: 0.5em;
         }
     </style>
 </head>
 
 <body>
-    <div id="login-image">
-        <img src="https://i.imgur.com/amSiZs4.png" title="source: imgur.com" />
+    <div id="Gpaper">
+    <div class="top-nav">
+        <div id="login-image">
+            <img src="https://i.imgur.com/amSiZs4.png" title="source: imgur.com" / alt="login">
+        </div>
+        <input type="text" id="searchbox" placeholder="type sth but no thing :P">
     </div>
     
-    <input type="text">
     <div class="case">
         <h1 id="title">書櫃</h1>
         <div class="item">
@@ -70,22 +108,54 @@
             </a>
         </div>
         <div class="item">
-            <a href="https://imgur.com/8b0YmPk">
-                <img src="https://i.imgur.com/8b0YmPk.png" title="source: imgur.com" />
+            <a href="https://imgur.com/iVx8Qgb">
+                <img src="https://i.imgur.com/iVx8Qgb.jpg" title="source: imgur.com" />
             </a>
         </div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
         <div class="item">
-            <a href="https://imgur.com/8b0YmPk">
-                <img src="https://i.imgur.com/8b0YmPk.png" title="source: imgur.com" />
+            <a href="https://imgur.com/1tbHmPX">
+                <img src="https://i.imgur.com/1tbHmPX.jpg" title="source: imgur.com" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://imgur.com/mIatWwf">
+                <img src="https://i.imgur.com/mIatWwf.jpg" title="source: imgur.com" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://imgur.com/98ZjkIT">
+                <img src="https://i.imgur.com/98ZjkIT.jpg" title="source: imgur.com" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://imgur.com/hV7sfGu">
+                <img src="https://i.imgur.com/hV7sfGu.png" title="source: imgur.com" />
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://imgur.com/Jy3gXu0">
+                <img src="https://i.imgur.com/Jy3gXu0.png" title="source: imgur.com" />
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.pinterest.jp/pin/801922277428678993/">
+                <img src="https://i.pinimg.com/originals/3a/0d/73/3a0d738d84be15f513a52998f8c96bb5.jpg" alt="好像混入了奇怪的東西?">
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="https://imgur.com/bdK4JLp">
+                <img src="https://i.imgur.com/bdK4JLp.png" title="source: imgur.com" />
             </a>
         </div>
         <div class="item"></div>
-    </div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div></div>
 </body>
 
 </html>

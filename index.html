@@ -6,6 +6,16 @@
     <title>Wellcome</title>
     <!-- fake Google demo -->
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .peel
+        {
+            display: block;
+            justify-content: center;
+        }
         .nav
         {
             display: flex;
@@ -15,19 +25,63 @@
         {
             margin: 0 1rem;
         }
+        .logo img
+        {
+            position:relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 375px;
+            height: 150px;
+        }
+        .search
+        {
+            border-radius: 50vb;
+            border: solid 0.05rem;
+            width: 50vw;
+            height: 2rem;
+            position:relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+            z-index: 100;
+        }
+        .search svg
+        {
+            height: 24px;
+            width: 76px;
+        }
+        .search > input
+        {
+            width: 90%;
+            border: 0;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <div id="left">
-            <span>關於 Google</span>
-            <span>Google商店</span>
+    <div class="peel">
+        <div class="nav">
+            <div id="left">
+                <span>關於 Google</span>
+                <span>Google商店</span>
+            </div>
+            <div id="right">
+                <span>Gmail</span>
+                <span>圖片</span>
+                <span><img src="" alt="head"></span>
+            </div>
         </div>
-        <div id="right">
-            <span>Gmail</span>
-            <span>圖片</span>
-            <span><img src="" alt="head"></span>
+        <div class="logo">
+            <a href="https://imgur.com/b0pJX2x"><img src="https://i.imgur.com/b0pJX2x.gif" title="source: imgur.com" /></a>
         </div>
-    </div>
+        <div class="search">
+            <!--  -->
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            <input type="text">
+            <!-- camera -->
+            <svg class="Gdd5U" focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="192" width="192"></rect><g><circle fill="#34a853" cx="144.07" cy="144" r="16"></circle><circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle><path fill="#ea4335" d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"></path><path fill="#fbbc04" d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"></path><path fill="#4285f4" d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"></path></g></svg>
+        </div>
+</div>
 </body>
 </html>

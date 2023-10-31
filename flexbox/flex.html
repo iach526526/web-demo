@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet"> 
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #hint
+        {
+            text-align: center;
+            font-size: 5rem;
+        }
+        .nav
+        {
+            width:100vw;
+            display: flex;
+            justify-content:space-around;
+            background-color: #dafa3b;
+            
+        }
+        .nav div:nth-child(2)
+        {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .nav .nav-col
+        {
+            display: block;
+            margin: 1rem 3rem;
+        }
+        /**/
+        .map{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background:linear-gradient(150deg,#6e51f1, #7b0fdf);
+            justify-content: center;
+            flex-direction:row-reverse;
+        }
+        .treasure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .treasure img
+        {
+            height: 15rem;
+            width: 15rem;
+        }
+        .order_text
+        {
+            font-family: 'Seaweed Script', cursive;
+            position: absolute;
+            font-size: 2rem;
+        }
+        .treasure:nth-child(21):hover,.treasure:nth-child(11):hover
+        {
+            content:url('https://i.imgur.com/Zb9b0O2.png');
+            height: 15rem;
+            width: 15rem;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hint">Find the rewards in the treasure chests!</h1>
+    <!-- nav -->
+    <div class="nav">
+        <div >
+            <span class="nav-col">SETTING</span>
+        </div>
+        <div >
+            <span class="nav-col">TOOL</span>
+        </div>
+        <div >
+            <span class="nav-col">ABOUT</span>
+        </div>
+    </div>
+    <!-- 主介面 -->
+    <div class="map">
+        <div class="treasure"><span class="order_text">1</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">2</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">3</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">4</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">5</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">6</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">7</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">8</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">9</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">10</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">11</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">12</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">13</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">14</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">15</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">16</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">17</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">18</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">19</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure"><span class="order_text">20</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+        <div class="treasure" text="123"><span class="order_text">21</span><img src="https://i.imgur.com/k6xP9YK.png" alt="" title="source: imgur.com"></div>
+
+        
+    </div>
+</body>
+
+</html>

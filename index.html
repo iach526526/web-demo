@@ -10,16 +10,57 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-size: 14px;
+            
+        }
+        a{
+            text-decoration:none ;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        input[type=text]:focus{
+            /* background-color: lightblue; */
+            background: #303134;
+            border: none;
+        }
+        input{
+            background:#202124;
+            border: none;
         }
         .peel
         {
-            display: block;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            background-color:#202124;
+            height: 100vh;
         }
         .nav
         {
             display: flex;
             justify-content:space-between;
+            margin: 1%;
+        }
+        .nav-ele
+        {
+            display: flex;
+            align-items: center;
+        }
+        .nav-ele:nth-child(1)/*左邊*/
+        {
+            color: #bdc1c6;
+        }
+        .nav-ele:nth-child(2)/*右邊*/
+        {
+            color: white;
+        }
+        .nav-ele img
+        /*大頭貼*/
+        {
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
         }
         .nav span
         {
@@ -33,12 +74,17 @@
             width: 375px;
             height: 150px;
         }
+        .search:hover
+        {
+            background: #303134;
+        }
         .search
         {
             border-radius: 50vb;
-            border: solid 0.05rem;
+            border: solid 0.05rem #bdc1c6;
+            margin:1rem 0 1.5rem 0;
             width: 50vw;
-            height: 2rem;
+            height: 3rem;
             position:relative;
             left: 50%;
             transform: translateX(-50%);
@@ -48,40 +94,123 @@
         }
         .search svg
         {
+            margin-top: 3px;
             height: 24px;
-            width: 76px;
+            width: 50px;
         }
         .search > input
         {
-            width: 90%;
+            flex-grow: 1;
+            
             border: 0;
             z-index: -1;
+        }
+        .under-search
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .btn-ele
+        {
+            background: #303134;
+            padding: 1%;
+            border-radius: 4px;
+            margin:0.5em;
+            border:0.5px solid #ffffff00 ;/* 透明度0的實線，幫hover預留空間用，避免後續元素推擠，透明也沒人看的到 */
+            
+        }
+        .btn-ele:hover
+        {
+            border:0.5px solid #FFFF ;
+            
+        }
+        .btn-ele a
+        {
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .ADandspace
+        {
+            flex-grow: 10;
+        }
+        #locate
+        {
+            
+            background-color: #1c1c1c;
+            color: #bdc1c6;
+        }
+        #locate div
+        {
+            margin: 1rem;
+        }
+        .footer
+        {
+            background-color: #1c1c1c;
+            border-top:0.5px solid #eae1e1;
+            display: flex;
+            justify-content:space-between;
+            /* height: 15%; */
+            align-items: center;
+            flex-grow: 1;
+            color: #bdc1c6;
+        }
+        .Fele
+        {
+            /* display: flex; */
+            display: inline;
+            margin: 1em;
+        }
+        .Fele a
+        {
+            color:#999da2;
         }
     </style>
 </head>
 <body>
     <div class="peel">
         <div class="nav">
-            <div id="left">
+            <div class="nav-ele">
                 <span>關於 Google</span>
                 <span>Google商店</span>
             </div>
-            <div id="right">
+            <div class="nav-ele">
                 <span>Gmail</span>
                 <span>圖片</span>
-                <span><img src="" alt="head"></span>
+                <div class="headphoto"><img src="./src/img/Photo stickers.JPG" alt="head"></div>
             </div>
         </div>
         <div class="logo">
-            <a href="https://imgur.com/b0pJX2x"><img src="https://i.imgur.com/b0pJX2x.gif" title="source: imgur.com" /></a>
+            <img src="https://i.imgur.com/b0pJX2x.gif" title="source: imgur.com" />
         </div>
         <div class="search">
-            <!--  -->
-            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-            <input type="text">
+            <!-- glasses -->
+            <span class="glasses">
+                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            </span>
+            
+            <input type="text" focusable="ture" id="wanaS">
             <!-- camera -->
-            <svg class="Gdd5U" focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="192" width="192"></rect><g><circle fill="#34a853" cx="144.07" cy="144" r="16"></circle><circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle><path fill="#ea4335" d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"></path><path fill="#fbbc04" d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"></path><path fill="#4285f4" d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"></path></g></svg>
+            <svg focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="192" width="192"></rect><g><circle fill="#34a853" cx="144.07" cy="144" r="16"></circle><circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle><path fill="#ea4335" d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"></path><path fill="#fbbc04" d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"></path><path fill="#4285f4" d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"></path></g></svg>
         </div>
-</div>
+        <div class="under-search">
+            <div class="btn-ele"><a href="#">Google 搜尋</a></div>
+            <div class="btn-ele"><a href="./flexbox/flex.html">好手氣</a></div>
+        </div>
+        <div class="ADandspace"></div>
+        
+        <div id="locate"><div>治彎</div></div>
+        <div class="footer">
+            <div class="Fgroup">
+                <div class="Fele"><a href="#">廣告</a></div>
+                <div class="Fele"><a href="#">商業</a></div>
+                <div class="Fele"><a href="#">搜尋服務的運作方式</a></div>
+            </div>
+            <div class="Fgroup">
+                <div class="Fele"><a href="#">隱私權</a></div>
+                <div class="Fele"><a href="#">服務條款</a></div>
+                <div class="Fele"><a href="#">設定</a></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

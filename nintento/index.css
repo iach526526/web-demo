@@ -1,0 +1,62 @@
+*
+{
+    padding: 0;
+    margin:0;
+    
+}
+body{
+    background: linear-gradient(45deg, #ffffff, #c4b6b6);
+    animation-name:bgc-chang;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;/* 開始到結束再到開始 */
+}
+/* @keyframes bgc-chang {
+    25%{background: linear-gradient(45deg, #008b8b, #ffff00);}
+    50% {background: linear-gradient(45deg, #00aeae, #caca00);} 
+    75% {background: linear-gradient(45deg, #04d5d5, #ffb700);} 
+    100% {background: linear-gradient(45deg,#04d1d1, #ff9d00 );}
+} */
+
+.carousel .carousel-item {
+    margin-top:10px ;
+    padding-top: 25px;
+    background-color: #fff;
+  }
+.carousel .carousel-item img {
+min-height: 600px;
+max-height: 600px;
+object-fit:contain;
+object-position: top bottom;
+}
+.btm-color
+{
+    background-color: #ff0000;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px 200px 30px 100px;
+}
+.item .tag{
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+    position:absolute;
+    padding: 5px 10px;
+    top: 0;
+    left: -8px;
+    font-size: 24px;
+    font-family: 'Satisfy', cursive;
+}
+
+.item {
+    padding: 50px;
+    border: 1px outset rgb(0, 0, 0);
+    margin:10px 5px 10px 5px;
+    position: relative;
+}

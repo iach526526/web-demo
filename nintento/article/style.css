@@ -1,0 +1,153 @@
+#text {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    padding-top: 40px;
+    background-color: #252525;
+    color: #cacaca;
+    margin-left: 350px;
+    margin-right: 800px;
+    font-size:24px;
+    width:45%;
+    letter-spacing: 3px
+}
+#back{
+    padding:5px;
+    color:azure;
+    font-size: 36px;
+}
+#back_index{
+    padding:5px;
+    color:azure;
+    font-size: 36px;
+}
+span>a:hover{
+    background-color: rgb(41, 213, 3);
+}
+.title{
+    background-color: rgba(218, 221, 234, 0.426);
+    margin-left:350px;
+    margin-right: 800px;
+    padding-bottom: 0.5px;
+    height: 50px;
+    width:49.25%;
+}
+#btn{
+    width: 100px;
+    height: 65px;
+    /* margin: 0px 0px 0px 1000px; */
+    margin-left: 60px;
+    position:fixed;
+    background-color: aqua;
+    font-size: 24px;
+}
+aside {
+    
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+@keyframes change-color {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+
+    25% {
+        width: 300px;
+        height: 300px;
+    }
+
+    50% {
+        width: 30px;
+        height: 30px;
+    }
+
+    75% {
+        width: 300px;
+        height: 300px;
+    }
+
+    100% {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    color: aqua;
+    padding-left: 500px;
+    display: block;
+}
+
+.box-animation {
+    animation-name: change-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Korok_move {
+    0% {
+        padding-left: 95%;
+        width: 2.5%
+    }
+
+    50% {
+        padding-top: 10%;
+
+    }
+
+    100% {
+        padding-left: 0%;
+        width: 6%;
+    }
+}
+
+.Korok-animation {
+    animation-name: Korok_move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    width: 10%;
+
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/happy_birthday.png);
+    
+}
+
+/* .korok2 {
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    padding-top: 80px;
+   
+} */
+.korok2:hover{
+position:relative;/*意思是指要相对定位了*/
+left: 50px;
+top: -50px;
+}
+/*貪吃蛇用的*/
+.game{
+    margin-right:50%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.canvas{
+    box-shadow: black 10px 10px 50px;
+}

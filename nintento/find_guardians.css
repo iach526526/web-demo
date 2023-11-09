@@ -1,0 +1,11 @@
+* {
+    cursor: url("./cur/Ancient_Arrow.cur"), pointer;
+    padding: 0;
+    margin: 0;
+}
+.gu{
+    position:static;
+    margin: -200px 0px 94px 352px;
+    opacity: 0.8;
+}
+

@@ -1,0 +1,62 @@
+/*nav*/
+.main-nav
+{
+    background-color: rgb(255, 0, 0);
+    
+}
+.top{
+    display: flex;
+    justify-content: center;
+    
+}
+.in-the-top
+{
+    display: none;
+    position: absolute;
+}
+.in-the-top li
+{
+    text-align: center;
+    list-style: none;
+    padding: 25px;
+}
+.top-1:hover .in-the-top
+{
+    display: block;
+    z-index:999;/*提高圖層優先度，否則會被旋轉木馬擋住*/
+    position:absolute;
+    
+}
+.in-the-top li:nth-child(odd){
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    
+}
+.in-the-top li:nth-child(even){
+    background-color: rgb(38, 252, 5);
+    color: rgb(3, 3, 3);
+}
+.top-1{
+    margin: 15px;
+    position: relativeab;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+.in-the-top a
+{
+    color: rgb(0, 0, 0);
+}
+.bot{
+    padding:30px;
+    background-color: rgb(255, 255, 255);
+}
+.main-nav .btn-outline-success
+{
+    background-color: #67ec43;
+    color: #ff0000;
+}
+/*nav結束*/

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.main{
+    margin: 100px 100px 0px 100px;
+    background-color: rgb(37, 39, 39);
+    width: 950px;
+    height: 250px;
+    padding: 50px 50px 50px 50px;
+    border:inset rgba(65, 84, 84, 0.791);
+}
+.head_img{
+    
+    float: left; 
+    border: inset 5px;
+}
+h1{
+    margin-left: 50%;
+}
+div{
+    display: block;
+}
+
+
+.description{
+    border: 3px ridge rgb(113, 125, 110);
+    float: left;
+    margin-left: 25px;
+    padding: 20px 50px 50px 50px;
+    width: 500px;
+}
+.description p{
+    letter-spacing: 3px;
+    font-size: 20px;
+    position: relative;
+}
+.menu_page{
+    margin: 20px 100px 0px 100px;
+    background-color: rgb(37, 39, 39);
+    width: 950px;
+    height: 300px;
+    padding: 50px 50px 50px 50px;
+    text-align:center;
+    border: 2px outset rgba(65, 84, 84, 0.791);
+}
+.menu{
+    margin:0; padding:0; 
+    display:inline-block;
+}
+div ul li{
+    display:inline;
+    background-color: rgb(54, 61, 61);
+    border: 5px ridge rgb(125, 110, 110);
+    width: 200px;
+    font-size: 30px; 
+    list-style:none; /*讓圓點消失*/
+    float:left;
+    padding-left:5px;
+    padding-right:5px;
+    margin:10px 5px 5px 5px
+}
+div ul li:hover{
+    background-color: rgb(64, 76, 76);
+}
+a{
+    text-decoration:none;
+    color: white;
+}
+h1{
+    color: white;
+}
+p{
+    color: white;
+}
+body{
+   background-color: rgb(37, 39, 39);
+   
+}
+
+

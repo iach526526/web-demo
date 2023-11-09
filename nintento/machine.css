@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.machine
+{
+    display: flex;
+    
+    background-color:#e60012;
+    animation: bgc 2s ease-out 0.25s 1 normal running;
+    
+}
+.buy-but
+{
+    display: block;
+    align-items: center;
+}

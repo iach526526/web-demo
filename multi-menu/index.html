@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head?>
+        <title>多層選單</title>
+        <meta http-equiv="refresh" content="10">
+    </head>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+        .main-nav{
+            background-color: #fa0;
+        }
+        .main-nav a{
+            color: #fff;
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .main-nav >ul{
+            display: flex;
+            justify-content: center;
+        }
+        .sub-menu{
+            display: none;/*原本隱藏，滑過後觸發*/
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+        }
+        .sub-menu-item >a{
+            color: #fa0;
+        }
+        .menu-item:hover .sub-menu{
+            display: flex;
+        }
+
+    </style>
+    <body>
+        <nav class="main-nav">
+            <ul>
+                <li class="menu-item"><a href="">母標題1</a>
+                    
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item"><a href="">子標題1-1</a>
+                           <ul>
+                            <li><a href="">123</a></li>
+                            <li><a href="">456</a></li>
+                           </ul> 
+                        </li>
+                        
+                        <li class="sub-menu-item"><a href="">子標題2-1</a>
+                            <ul>
+                                <li><a href="">123</a></li>
+                                <li><a href="">456</a></li>
+                               </ul> 
+                        </li>
+                        
+                        <li class="sub-menu-item"><a href="">子標題3-1</a>
+                            <ul>
+                                <li><a href="">123</a></li>
+                                <li><a href="">456</a></li>
+                               </ul> 
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="">母標題2</a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item"><a href="">子標題1-1</a>
+                            <ul>
+                                <li><a href="">123</a></li>
+                                <li><a href="">456</a></li>
+                               </ul> 
+                        </li>
+                        <li class="sub-menu-item"><a href="">子標題1-2</a></li>
+                        <li class="sub-menu-item"><a href="">子標題1-3</a></li>
+                        <li class="sub-menu-item"><a href="">子標題2-1</a></li>
+                        
+                    </ul>
+                
+                
+                </li>
+                <li><a href="">母標題3</a></li>
+                <li><a href="">母標題4</a></li>
+                <li><a href="">母標題5</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

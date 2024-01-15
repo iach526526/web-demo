@@ -5,7 +5,7 @@
   "description": "pwa",
   "icons": [
     {
-      "src": "./con16X16.png",
+      "src": "./public/con16X16.png",
       "sizes": "16x16",
       "type": "image/png"
     }

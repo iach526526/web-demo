@@ -1,11 +1,11 @@
 {
-  "name": "testWeb",
+  "name": "ttttestWeb",
   "short_name": "tw",
   "background_color": "#fff",
   "description": "pwa",
   "icons": [
     {
-      "src": "/html_project/public/con16X16.png",
+      "src": "/public/con16X16.png",
       "sizes": "16x16",
       "type": "image/png",
       "purpose":"any"

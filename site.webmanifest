@@ -1,6 +1,6 @@
 {
   "name": "testWeb",
-  "short_name": "tw",
+  "short_name": "tww",
   "background_color": "#fff",
   "description": "pwa",
   "icons": [
@@ -12,7 +12,7 @@
     }
   ],
   "scope":"/",
-  "start_url":"//",
+  "start_url":"/",
   "display": "standalone",
   "orientation":"portrait"
 }

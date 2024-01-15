@@ -1,18 +1,19 @@
 {
   "name": "ttttestWeb",
   "short_name": "tw",
-  "background_color": "#fff",
   "description": "pwa",
   "icons": [
     {
-      "src": "/public/con16X16.png",
-      "sizes": "16x16",
+      "src": "/html_project/public/con128.png",
+      "sizes": "128x128",
       "type": "image/png",
       "purpose":"any"
     }
   ],
-  "scope":"/",
-  "start_url":"/",
+  "theme_color":"#171717",
+  "background_color": "red",
   "display": "standalone",
+  "scope":"/html_project/",
+  "start_url":"/html_project/",
   "orientation":"portrait"
 }

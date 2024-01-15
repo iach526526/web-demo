@@ -5,7 +5,7 @@
   "description": "pwa",
   "icons": [
     {
-      "src": "https://imgur.com/i2lTuBo",
+      "src": "./public/con16X16.png",
       "sizes": "16x16",
       "type": "image/png",
       "purpose":"any"

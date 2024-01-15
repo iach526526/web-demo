@@ -4,8 +4,14 @@
   "description": "pwa",
   "icons": [
     {
-      "src": "/html_project/public/con128.png",
+      "src": "./src/con128.png",
       "sizes": "128x128",
+      "type": "image/png",
+      "purpose":"any"
+    },
+    {
+      "src": "con16x16.png",
+      "sizes": "16x16",
       "type": "image/png",
       "purpose":"any"
     }

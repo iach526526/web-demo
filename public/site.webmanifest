@@ -5,10 +5,13 @@
   "description": "pwa",
   "icons": [
     {
-      "src": "./public/con16X16.png",
+      "src": "/html_project/con16X16.png",
       "sizes": "16x16",
       "type": "image/png",
       "purpose":"any"
     }
-  ]
+  ],
+  "scope":"/html_project/",
+  "start_url":"/html_project/",
+  "orientation":"portrait"
 }

@@ -5,9 +5,10 @@
   "description": "pwa",
   "icons": [
     {
-      "src": "./public/con16X16.png",
+      "src": "https://i.imgur.com/i2lTuBo.png",
       "sizes": "16x16",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"any"
     }
   ]
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 5s linear infinite;
+        }
+
+        .marquee-content2 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee2 5s linear infinite;
+        }
+
+        .marquee-content3 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee2 5s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marquee2 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marquee3 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee-container">
+        <!-- add the same img to infinite loop -->
+        <div class="marquee-content">
+            <img src="https://github-profile-trophy.vercel.app/?username=iach526526&theme=radical&row=1" alt="Image">
+        </div>
+        <div class="marquee-content2">
+            <img src="https://github-profile-trophy.vercel.app/?username=iach526526&theme=radical&row=1" alt="Image">
+        </div>
+        <div class="marquee-content3">
+            <img src="https://github-profile-trophy.vercel.app/?username=iach526526&theme=radical&row=1" alt="Image">
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

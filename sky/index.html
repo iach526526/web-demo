@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薬屋のひとりごと</title>
+    <style>
+        body
+{
+  background-color: #293b8b;
+  padding:0;
+  margin:0;
+  
+}
+.container {
+  position: relative; /* 讓內部的絕對定位參考這個區塊 */
+  width: 100%;
+  height: 100vh;
+  display:flex;
+}
+.horizon {
+    position: absolute ;
+    width: 100%;
+    height: 60%;
+/*     background: radial-gradient(circle,#050719 0%,#0f204e 50% ,#293b8b 100%); */
+  background: radial-gradient(closest-side, rgba(5, 7, 25, 1) 0%,  rgba(5, 9, 1, 0.9) 50%, #142654 80%,#556288 130%);
+/*     background: #050719; */
+    transform: translate(0%,-30%);
+    border-radius: 80%/100%;
+  filter: blur(15px) brightness(1.5);
+}
+
+.star
+{
+  position:absolute ;
+  width: 5px;
+  height: 5px;
+  background:#d4e9ff;
+  border-radius: 100%/100%;
+
+}
+#maw-maw {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: calc(40% + 300px); /* 40% 是 .horizon 的高度，額外 +50px 避開模糊範圍 */
+}
+#light-L,
+#light-R {
+  position: absolute;
+  top: 0;
+  height: 60%;
+  width: 50%;
+  filter: blur(50px); /* 增加模糊效果 */
+  mix-blend-mode: screen; /* 讓光束更柔和 */
+}
+#light-L
+{
+/*   position: relative; */
+  left: 0;
+  background: linear-gradient(180deg,  rgba(87, 102, 139,.9) 0%, rgba(87, 102, 139,.3) 50%);
+  width:50%;
+    border-radius: 10% 30% 90% 10%;
+  height:60%
+
+}
+
+#light-R
+{
+/*   position: relative; */
+  right:0;
+  background: linear-gradient(180deg,  rgba(87, 102, 139,.9) 50%, rgba(87, 102, 139,.1) 100%);
+  width:50%;
+    border-radius: 0% 60% 0% 100% ;
+  height:60%
+
+}
+
+    </style>
+    <!-- https://www.youtube.com/watch?v=29pmd1QiK-4&start=78 -->
+</head>
+<body>
+    <div class="container">
+        <div id="light-L"></div>
+        <div id="light-R"></div>
+           <div class="horizon"></div>
+    </div>
+    
+    <div class="ground">
+      <img src="https://i.imgur.com/Mm3ANFw.png" alt="東宮外牆" id="maw-maw">
+    </div>
+    
+<script>
+    const container = document.querySelector('.container');
+const horizon = document.querySelector('.horizon');
+const rect = horizon.getBoundingClientRect();
+
+ cx = rect.left + rect.width / 2; // 橢圓中心 x
+ cy = rect.top + rect.height / 2; // 橢圓中心 y
+ a = rect.width / 2; // 橢圓的長半軸
+ b = rect.height / 2; // 橢圓的短半軸
+const numOuterStars = 50; // 外圈星星數量 (確保均勻分布)
+const numInnerStars = 500; // 內圈星星數量 (隨機分布)
+const stars = [];
+
+// 創建星星
+function createStars() {
+    // 1. 生成固定在橢圓邊界的星星
+    for (let i = 0; i < numOuterStars; i++) {
+        let angle = (2 * Math.PI * i) / numOuterStars; // 均勻分佈
+        let x = cx + a * Math.cos(angle);
+        let y = cy + b * Math.sin(angle);
+
+        let star = createStarElement(x, y);
+        stars.push({
+            element: star,
+            angle: angle,
+            speed: 0.0009, // 統一較慢的旋轉速度
+            a: a,
+            b: b
+        });
+    }
+
+    // 2. 生成隨機分布在內圈的星星
+    for (let i = 0; i < numInnerStars; i++) {
+        let angle = Math.random() * Math.PI * 2; // 隨機角度
+        let radiusFactor = Math.random(); // 內圈縮小比例
+        let starA = a * radiusFactor;
+        let starB = b * radiusFactor;
+        let x = cx + starA * Math.cos(angle);
+        let y = cy + starB * Math.sin(angle);
+
+        let star = createStarElement(x, y);
+        stars.push({
+            element: star,
+            angle: angle,
+            speed: 0.001 , // 內圈星星較快
+            a: starA,
+            b: starB
+        });
+    }
+}
+
+// 創建星星 HTML 標籤
+function createStarElement(x, y) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+    star.style.width = `${Math.random() * 3 + 2}px`; // 星星大小隨機
+    star.style.height = star.style.width;
+    star.style.opacity = Math.random();
+    container.appendChild(star);
+    return star;
+}
+
+// 更新星星位置
+function updateStars() {
+    stars.forEach(star => {
+        star.angle += star.speed; // 更新旋轉角度
+        let x = cx + star.a * Math.cos(star.angle);
+        let y = cy + star.b * Math.sin(star.angle);
+        star.element.style.left = `${x}px`;
+        star.element.style.top = `${y}px`;
+    });
+
+    requestAnimationFrame(updateStars);
+}
+// **清空並重新生成星星**
+function resetStars() {
+    document.querySelectorAll('.star').forEach(star => star.remove());
+    stars.length = 0; // 清空星星數組
+    createStars();
+}
+// **更新橢圓數據**
+function updateEllipse() {
+    const rect = horizon.getBoundingClientRect();
+    cx = rect.left + rect.width / 2; // 橢圓中心 x
+    cy = rect.top + rect.height / 2; // 橢圓中心 y
+    a = rect.width / 2; // 橢圓的長半軸
+    b = rect.height / 2; // 橢圓的短半軸
+}
+window.addEventListener('resize',()=>{
+  updateEllipse();
+  resetStars(); // 重新生成星星
+})
+
+createStars();
+updateStars();
+
+</script>    
+</body>
+</html>

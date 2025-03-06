@@ -21,7 +21,7 @@
 .horizon {
     position: absolute ;
     width: 100%;
-    height: 60%;
+    height: 50%;
 /*     background: radial-gradient(circle,#050719 0%,#0f204e 50% ,#293b8b 100%); */
   background: radial-gradient(closest-side, rgba(5, 7, 25, 1) 0%,  rgba(5, 9, 1, 0.9) 50%, #142654 80%,#556288 130%);
 /*     background: #050719; */
@@ -39,12 +39,48 @@
   border-radius: 100%/100%;
 
 }
+.sight {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+}
 #maw-maw {
   position: absolute;
   width: 100%;
-  height: auto;
-  top: calc(40% + 300px); /* 40% 是 .horizon 的高度，額外 +50px 避開模糊範圍 */
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
 }
+
+#maw-maw img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transform-origin: center bottom; /* 縮放基準點設在底部中間 */
+}
+
+/* 當螢幕變小時，放大圖片 */
+@media (max-width: 1200px) {
+  #maw-maw img {
+    transform: scale(2);
+  }
+}
+
+@media (max-width: 900px) {
+  #maw-maw img {
+    transform: scale(3);
+  }
+}
+
+@media (max-width: 600px) {
+  #maw-maw img {
+    transform: scale(4);
+  }
+}
+
 #light-L,
 #light-R {
   position: absolute;
@@ -80,15 +116,18 @@
     <!-- https://www.youtube.com/watch?v=29pmd1QiK-4&start=78 -->
 </head>
 <body>
+  <div class="sight">
     <div class="container">
         <div id="light-L"></div>
         <div id="light-R"></div>
            <div class="horizon"></div>
+          </div>
+    <div id="maw-maw">
+      <img src="./img/ground.png" alt="東宮外牆">
+
     </div>
     
-    <div class="ground">
-      <img src="https://i.imgur.com/Mm3ANFw.png" alt="東宮外牆" id="maw-maw">
-    </div>
+  </div>
     
 <script>
     const container = document.querySelector('.container');
